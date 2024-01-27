@@ -19,6 +19,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- Fontawesome kit. -->
+        <script src="https://kit.fontawesome.com/1bbb5634e6.js" crossorigin="anonymous"></script>
 
         <!-- Tailwind custom color and others. -->
         <script>
@@ -58,17 +60,48 @@
             ===================================================================================
          -->
         <header class="lg:container mx-auto">
-            
+            <div class="navbar py-5 lg:py-8">
+
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div class="flex items-center">
+                            <div class="block lg:hidden mr-3 text-3xl lg:text-2xl">
+                                <i class="fa-solid fa-bars-staggered"></i>
+                            </div>
+
+                            <a href="">
+                                <h2 class="text-common_heading_color text-2xl lg:text-4xl font-extrabold">Hockey<span class="text-common_button_color">’</span>s
+                                </h2>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="gap-11 menu-horizontal px-1 text-nav_link_color text-base font-normal">
+                        <li><a href="#" class="text-common_button_color text-base font-bold">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="navbar-end">
+                    <i class="fa-solid fa-magnifying-glass text-2xl text-nav_link_color hidden lg:block"></i>
+                    <a class="btn text-white_color text-base lg:text-xl font-bold bg-common_button_color py-0.5 lg:py-4 px-2 lg:px-6 ml-6 flex-nowrap">Get Ticket</a>
+                </div>
+            </div>
         </header>
 
         <!-- 
-                                                            Header.
+                                                        Main.
             ===================================================================================
          -->
         <main class="lg:container mx-auto"></main>
 
         <!-- 
-                                                            Header.
+                                                    Footer.
             ===================================================================================
          -->
          <footer></footer>
