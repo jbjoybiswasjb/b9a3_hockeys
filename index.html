@@ -33,9 +33,10 @@
                             common_button_color: '#FF4240',
                             nav_link_color: '#424247',
                             white_color: '#fff',
-                            banner_paragraph_color: 'rgba(255, 255, 255, 0.60)',
-                            common_paragraph_color: 'rgba(19, 19, 24, 0.60)',
-                            footer_link_color: 'rgba(255, 255, 255, 0.60)',
+                            banner_paragraph_color: 'rgb(255, 255, 255)',
+                            common_paragraph_color: 'rgb(19, 19, 24)',
+                            footer_link_color: 'rgb(255, 255, 255)',
+                            radial_bg_color: '#E7E7E8',
                         }
                     }
                 }
@@ -49,19 +50,38 @@
                 font-family: 'Manrope', sans-serif;
             }
 
+            /* Progressive bar. */
+            .radial-progress::before {
+                    background: conic-gradient(currentColor calc(var(--value) * 1%),#E7E7E8 0);
+            }
+
+            .radial_one {
+                color: #ff4240;
+            }
+            .radial_two {
+                color: #49d293;
+            }
+            .radial_three {
+                color: #ffb546;
+            }
+            .radial_four {
+                color: #4c8df1;
+            }
+
         </style>
 
     </head>
 
-    <body class="manrope_font">
+    <body class="manrope_font mx-2 lg:mx-0">
 
         <!-- 
                                                     Header.
             ===================================================================================
          -->
-        <header class="lg:container mx-auto">
+        <header class="container mx-auto">
             <div class="navbar py-5 lg:py-8">
 
+                <!-- Navigation left. -->
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div class="flex items-center">
@@ -77,6 +97,7 @@
                     </div>
                 </div>
 
+                <!-- Navigation middle. -->
                 <div class="navbar-center hidden lg:flex">
                     <ul class="gap-11 menu-horizontal px-1 text-nav_link_color text-base font-normal">
                         <li><a href="#" class="text-common_button_color text-base font-bold">Home</a></li>
@@ -87,18 +108,152 @@
                     </ul>
                 </div>
 
+                <!-- Navigation right. -->
                 <div class="navbar-end">
                     <i class="fa-solid fa-magnifying-glass text-2xl text-nav_link_color hidden lg:block"></i>
                     <a class="btn text-white_color text-base lg:text-xl font-bold bg-common_button_color py-0.5 lg:py-4 px-2 lg:px-6 ml-6 flex-nowrap">Get Ticket</a>
                 </div>
             </div>
+
+            <!-- 
+                                                    Banner section.
+                =======================================================================
+             -->
+            <section class="">
+                <div class="carousel w-full h-5/6 lg:h-3/4">
+
+                    <!-- One. -->
+                    <div id="slide1" class="carousel-item w-full lg:relative">
+                        <img src="Images/1.png" class="w-full rounded-2xl relative"/>
+                        <div class="absolute flex justify-between flex-col lg:flex-row lg:items-end lg:left-5 lg:right-5 lg:bottom-5">
+                            <div class="flex gap-4">
+                                <a href="#slide4" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❮</a>
+                                <a href="#slide3" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❯</a>
+                            </div>
+                            <div class="bg-common_heading_color p-4 lg:p-8 w-4/5 lg:w-1/2 rounded-xl">
+                                <h3 class="text-white_color text-2xl font-extrabold mb-4">Meet all the heroes from the field</h3>
+                                <p class="text-banner_paragraph_color text-base font-medium">If you want to watch our heros. You can watch very easily. There is so many pictures of our first heros. They are extraordinary.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Two. -->
+                    <div id="slide2" class="carousel-item relative w-full">
+                        <img src="Images/2.png" class="w-full rounded-2xl" />
+                        <div class="absolute flex justify-between items-end left-5 right-5 bottom-5">
+                            <div class="flex gap-4">
+                                <a href="#slide1" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❮</a>
+                                <a href="#slide3" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❯</a>
+                            </div>
+                            <div class="bg-common_heading_color p-8 w-1/2 rounded-xl">
+                                <h3 class="text-white_color text-2xl font-extrabold mb-4">Meet all the heroes from the field</h3>
+                                <p class="text-banner_paragraph_color text-base font-medium">If you want to watch our heros. You can watch
+                                    very easily. There is so many pictures of our first heros. They are extraordinary.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Three. -->
+                    <div id="slide3" class="carousel-item relative w-full">
+                        <img src="Images/3.png" class="w-full rounded-2xl" />
+                        <div class="absolute flex justify-between items-end left-5 right-5 bottom-5">
+                            <div class="flex gap-4">
+                                <a href="#slide2" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❮</a>
+                                <a href="#slide4" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❯</a>
+                            </div>
+                            <div class="bg-common_heading_color p-8 w-1/2 rounded-xl">
+                                <h3 class="text-white_color text-2xl font-extrabold mb-4">Meet all the heroes from the field</h3>
+                                <p class="text-banner_paragraph_color text-base font-medium">If you want to watch our heros. You can watch
+                                    very easily. There is so many pictures of our first heros. They are extraordinary.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Four. -->
+                    <div id="slide4" class="carousel-item relative w-full">
+                        <img src="Images/4.png" class="w-full rounded-2xl" />
+                        <div class="absolute flex justify-between items-end left-5 right-5 bottom-5">
+                            <div class="flex gap-4">
+                                <a href="#slide3" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❮</a>
+                                <a href="#slide1" class="btn btn-circle bg-common_heading_color text-2xl text-white_color border-none">❯</a>
+                            </div>
+                            <div class="bg-common_heading_color p-8 w-1/2 rounded-xl">
+                                <h3 class="text-white_color text-2xl font-extrabold mb-4">Meet all the heroes from the field</h3>
+                                <p class="text-banner_paragraph_color text-base font-medium">If you want to watch our heros. You can watch
+                                    very easily. There is so many pictures of our first heros. They are extraordinary.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </header>
+
 
         <!-- 
                                                         Main.
             ===================================================================================
          -->
-        <main class="lg:container mx-auto"></main>
+        <main class="container mx-auto">
+
+            <!-- 
+                                    Professional Hockey section.
+                ===================================================================
+             -->
+            <section class="mt-28">
+                <hr class="border-dotted">
+                <div class="py-8 w-4/5 lg:w-1/2 mx-auto text-center">
+                    <h3 class="text-common_heading_color text-4xl font-extrabold mb-6">Professional Hockeys Club</h3>
+                    <p class="text-common_paragraph_color text-base font-medium">
+                        There is a progress bar of our Professional Hockeys Club. If you interested to see our professional hockey club progress, you can see it below.
+                    </p>
+                </div>
+                <hr class="border-dotted">
+                <div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12 gap-12 text-center mb-24">
+                        <div>
+                            <div class="radial-progress progress_one mb-6 radial_one" style="--value:87; --size:12rem; --thickness: 1.5rem;"
+                                role="progressbar">
+                                <span class="text-common_heading_color text-3xl font-extrabold">87%</span>
+                            </div>
+                            <h3 class="text-common_heading_color text-xl font-semibold mb-4">Prayer Facility</h3>
+                            <p class="text-common_paragraph_color text-base font-normal">We have prayer facility in our professional hockey club.</p>
+                        </div>
+                        <div>
+                            <div class="radial-progress progress_one mb-6 radial_two" style="--value:95; --size:12rem; --thickness: 1.5rem;"
+                                role="progressbar">
+                                <span class="text-common_heading_color text-3xl font-extrabold">95%</span>
+                            </div>
+                            <h3 class="text-common_heading_color text-xl font-semibold mb-4">Experienced Coach</h3>
+                            <p class="text-common_paragraph_color text-base font-normal">
+                                We have Experience Coach.They are very Experienced.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="radial-progress progress_one mb-6 radial_three" style="--value:90; --size:12rem; --thickness: 1.5rem;"
+                                role="progressbar">
+                                <span class="text-common_heading_color text-3xl font-extrabold">90%</span>
+                            </div>
+                            <h3 class="text-common_heading_color text-xl font-semibold mb-4">Senior Player</h3>
+                            <p class="text-common_paragraph_color text-base font-normal">
+                                We have so many Senior Player.Senior player's are gold medalist.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="radial-progress progress_one mb-6 radial_four" style="--value:80; --size:12rem; --thickness: 1.5rem;"
+                                role="progressbar">
+                                <span class="text-common_heading_color text-3xl font-extrabold">80%</span>
+                            </div>
+                            <h3 class="text-common_heading_color text-xl font-semibold mb-4">Training Ground</h3>
+                            <p class="text-common_paragraph_color text-base font-normal">
+                                We have nice pray ground. Which wrapped with green grass.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
 
         <!-- 
                                                     Footer.
